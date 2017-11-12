@@ -2,6 +2,12 @@
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 
+.avocado {
+  border-radius: 130px;
+  background: #000; // without a background or border applied you won't be able to see if its rounded
+  margin-top: 10px;
+}
+
 .banana {
   border-radius: 20px;
   background: #000; // without a background or border applied you won't be able to see if its rounded
