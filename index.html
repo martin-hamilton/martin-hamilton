@@ -52,7 +52,7 @@ $.getJSON("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fforesight.
     count++;
   });
 
-  $( "<ul/><br/>", {
+  $( "<ul/>", {
     "class": "my-new-list",
     html: items.join( "" )
   }).appendTo( ".foresight" );
@@ -70,7 +70,7 @@ $.getJSON("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Finnovative
     count++;
   });
 
-  $( "<ul/><br/>", {
+  $( "<ul/>", {
     "class": "my-new-list",
     html: items.join( "" )
   }).appendTo( ".innovativetech" );
@@ -89,7 +89,7 @@ $.getJSON("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.slides
     count++;
   });
 
-  $( "<ul/><br/>", {
+  $( "<ul/>", {
     "class": "my-new-list",
     html: items.join( "" )
   }).appendTo( ".slideshare" );
@@ -108,7 +108,7 @@ $.getJSON("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.youtub
     count++;
   });
 
-  $( "<ul/><br/>", {
+  $( "<ul/>", {
     "class": "my-new-list",
     html: items.join( "" )
   }).appendTo( ".youtube" );
@@ -196,6 +196,7 @@ $.getJSON("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.youtub
             <p class="lead">You'll find recordings of my talks and tech demos, unboxingings and walk throughs on my <a href="https://www.youtube.com/martin_hamilton">YouTube channel</a></p>
           <div class="youtube">
             <div id="rss-yt"></div>
+		<br/>
           </div>
           </div>
           <div class="col-md-5">
@@ -212,6 +213,7 @@ $.getJSON("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.youtub
             <p class="lead">I do a lot of public speaking about technology and the impact of tech trends on society - most of my slides are available to view on <a href="https://slideshare.net/comth">SlideShare</a></p>
           <div class="slideshare">
             <div id="rss-slideshare"></div>
+		<br/>
           </div>
           </div>
           <div class="col-md-5 order-md-1">
@@ -228,6 +230,7 @@ $.getJSON("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.youtub
             <p class="lead">Hear about the latest tech in research and education from me and my team mates <a href="https://www.jisc.ac.uk/staff/suhad-aljundi">Suhad</a> and <a href="https://www.jisc.ac.uk/staff/matt-ramirez">Matt</a> on our <a href="https://innovativetechnology.jiscinvolve.org">Innovative Technology</a> blog</p>
           <div class="innovativetech">
             <div id="rss-innovativetech"></div>
+		<br/>
           </div>
           </div>
           <div class="col-md-5">
@@ -244,6 +247,7 @@ $.getJSON("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.youtub
             <p class="lead">Read our latest horizon scanning reports on the <a href="https://foresight.jiscinvolve.org">Technology Foresight</a> blog</p>
           <div class="foresight">
             <div id="rss-foresight"></div>
+		<br/>
           </div>
           </div>
           <div class="col-md-5">
