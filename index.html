@@ -38,6 +38,8 @@
 <script src="https://use.fontawesome.com/8a2ef6ff21.js"></script>
 <link href="bootstrap-social.css" rel="stylesheet">
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script src="instafeed.min.js"></script>
+<script src="main.js"></script>
 
 <script>
 $.getJSON("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fforesight.jiscinvolve.org%2Ffeed%2F", function( data ) {
@@ -81,7 +83,8 @@ $.getJSON("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.slides
   var count = 0;
   $.each( data.items, function( key, val ) {
     if (count <5) {
-     items.push( "<li><a href='" + val.link + "'>" + val.title + "</a></li>" );
+      var shorttitle = val.title.replace("Martin Hamilton - ", "");
+      items.push( "<li><a href='" + val.link + "'>" + shorttitle + "</a></li>" );
     }
     count++;
   });
@@ -119,7 +122,7 @@ $.getJSON("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.youtub
 
     <header>
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="#">Martin Hamilton</a>
+        <a class="navbar-brand" target="_self" href="#">Martin Hamilton</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -129,10 +132,10 @@ $.getJSON("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.youtub
               <a class="nav-link" target="_self" href="#">About Me</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" target="_self" href="#youtube">YouTube</a>
+              <a class="nav-link" target="_self" href="#youtube">YouTube Channel</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" target="_self" href="#slideshare">Slide Decks</a>
+              <a class="nav-link" target="_self" href="#slideshare">Slides &amp; Talks</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" target="_self" href="#innovativetech">Edtech Futures</a>
@@ -140,8 +143,14 @@ $.getJSON("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.youtub
             <li class="nav-item">
               <a class="nav-link" target="_self" href="#foresight">Horizon Scanning</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" target="_self" href="#media">Media Appearances</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" target="_self" href="#media">Photography</a>
+            </li>
           </ul>
-          <a class="form-inline mt-2 mt-md-0" href="https://www.google.co.uk/search?q=martin+hamilton+jisc">Google Me</a>
+          <a role="button" class="btn btn-primary form-inline mt-2 mt-md-0" href="https://www.google.co.uk/search?q=martin+hamilton+jisc">Google Me</a>
         </div>
       </nav>
     </header>
@@ -155,8 +164,13 @@ $.getJSON("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.youtub
 
         <div class="row featurette">
           <div class="col-md-7 order-md-2">
-            <h2>About Me</h2>
-            <p class="lead">Hi, I'm Martin. I work for <a href="https://www.jisc.ac.uk/staff/martin-hamilton">Jisc</a> in the UK as a Futurist - here's my <a href="https://www.jisc.ac.uk/staff/martin-hamilton">work home page</a>. We run shared services for around 18 million people at UK universities and colleges, schools and the wider public sector - like the <a href="https://www.jisc.ac.uk/janet">Janet network</a>, <a href="https://www.jiscmail.ac.uk">JiscMail</a>, <a href="http://eduroam.org">eduroam</a> and <a href="https://govroam.org">govroam</a></p>
+            <h2 class="fittext animateme"
+				data-when="exit"
+				data-from="0"
+				data-to="0.75"
+				data-opacity="0"
+				data-translatey="-250" >About Me</h2>
+            <p class="lead">Hi, I'm Martin. I work for <a href="https://www.jisc.ac.uk">Jisc</a> in the UK as a Futurist - here's my <a href="https://www.jisc.ac.uk/staff/martin-hamilton">work home page</a>. We run shared services for around 18 million people at UK universities and colleges, schools and the wider public sector - like the <a href="https://www.jisc.ac.uk/janet">Janet network</a>, <a href="https://www.jiscmail.ac.uk">JiscMail</a>, <a href="http://eduroam.org">eduroam</a> and <a href="https://govroam.org">govroam</a></p>
             <p class="lead">Right now I'm mainly looking at the potential for research and education of AR, VR, AI, ML and other Two Letter Acronyms. Read on to find out more, and do <a href="mailto:martin.hamilton@jisc.ac.uk">get in touch</a> if you're interested in collaborating ;-)</p>
 	    <p class="lead">
               <a class="btn btn-social-icon btn-twitter" href="https://twitter.com/martin_hamilton"> <span class="fa fa-twitter"></span> </a> 
@@ -169,7 +183,7 @@ $.getJSON("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.youtub
               </p>
           </div>
           <div class="col-md-5 order-md-1">
-            <img class="featurette-image img-fluid mx-auto" src="ms-icon-310x310.png">
+            <img class="featurette-image img-fluid mx-auto banana" src="ms-icon-310x310.png">
           </div>
         </div>
 
@@ -185,7 +199,7 @@ $.getJSON("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.youtub
           </div>
           </div>
           <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" src="youtube.png">
+            <img class="featurette-image img-fluid mx-auto banana" src="youtube.png">
           </div>
         </div>
 
@@ -194,14 +208,14 @@ $.getJSON("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.youtub
 
         <div id="slideshare" class="row featurette">
           <div class="col-md-7 order-md-2">
-            <h2>Slide Decks</h2>
+            <h2>Slides &amp; Talks</h2>
             <p class="lead">I do a lot of public speaking about technology and tech trends impact on society - most of my slides are available to view on <a href="https://slideshare.net/comth">SlideShare</a></p>
           <div class="slideshare">
             <div id="rss-slideshare"></div>
           </div>
           </div>
           <div class="col-md-5 order-md-1">
-            <img class="featurette-image img-fluid mx-auto" src="slideshare.png" alt="Generic placeholder image">
+            <img class="featurette-image img-fluid mx-auto banana" src="slideshare.png">
           </div>
         </div>
 
@@ -217,7 +231,7 @@ $.getJSON("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.youtub
           </div>
           </div>
           <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" src="innovativetech.png" alt="Generic placeholder image">
+            <img class="featurette-image img-fluid mx-auto banana" src="innovativetech.png">
           </div>
         </div>
 
@@ -233,19 +247,52 @@ $.getJSON("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.youtub
           </div>
           </div>
           <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" src="foresight.png" alt="Generic placeholder image">
+            <img class="featurette-image img-fluid mx-auto banana" src="foresight.png">
+          </div>
+        </div>
+
+	<div id="media"></div>
+        <div class="featurette-divider"></div>
+
+        <div id="media" class="row featurette">
+          <div class="col-md-7">
+            <h2>Media Appearances</h2>
+            <p class="lead">Here's a selection of media clippings of articles I've written and interviews I've given. I'm always interested speaking to journalists about the work we do at Jisc - please do <a href="mailto:martin.hamilton@jisc.ac.uk">drop me a line</a> directly or contact the <a href="mailto:press@jisc.ac.uk">Jisc press team</a></p>
+          <ul>
+		<li><a href="http://www.wired.co.uk/article/krack-wifi-cybersecurity-standards">Wired UK - Krack has broken Wi-Fi security... but it's not all doom and gloom</a></li>
+		<li><a href="https://www.tes.com/news/further-education/breaking-views/fe-needs-foster-and-nurture-maker-hacker-and-tinkerer">TES FE News - FE needs to foster and nurture the maker, hacker and tinkerer</a></li>
+		<li><a href="http://edtechnology.co.uk/Article/essential-edtech-for-2017">Education Technology - Essential edtech for 2017</a></li>
+		<li><a href="https://www.cio.co.uk/cloud-computing/how-choose-right-cloud-services-for-your-organisation-3644280/">CIO UK - How to choose the right cloud services for your organisation</a></li>
+		<li><a href="http://academytoday.co.uk/Article/future-classroom-will-be-virtual-and-taught-by-robots">Academy Today - Future classroom will be virtual and taught by robots</a></li>
+		<li><a href="http://universitybusiness.co.uk/Article/whats-next-in-wearable-tech-for-research-and-education">University Business - What's next in wearable tech for research and education?</a></li>
+		<li><a href="https://er.educause.edu/articles/2015/6/a-year-of-living-in-the-future">EDUCAUSE Review - A Year of Living in the Future</a></li>
+		<li><a href="https://www.class-central.com/report/european-leaders-edtech-think-state-moocs-part-3/">Class Central - What European Leaders in EdTech Think of the State of MOOCs</a></li>
+	  </ul>
+          </div>
+          <div class="col-md-5">
+            <img class="featurette-image img-fluid mx-auto banana" src="tesfenews.png">
           </div>
         </div>
 
         <div class="featurette-divider"></div>
         <!-- /END THE FEATURETTES -->
 
-      </div><!-- /.container -->
+        <div id="photography" class="row featurette">
+          <div>
+            <h2>Photography</h2>
+            <p class="lead">I'm also a keen photographer and <a href="https://www.google.co.uk/maps/contrib/113856997021605363046/photos/@52.7553623,-1.2228245,15z/data=!4m3!8m2!3m1!1e1?authuser=1">Google Maps Local Guide</a>, with a sideline in <a href="https://theta360.com/users/63807">360 degree imaging</a>. You can see some of my most recent pictures below. If you like them, why not <a href="">follow me on Instagram</a> for more, or <a href="mailto:m@martinh.net">get in touch</a> if you'd like me to take some photos for you</p>
+          <div class="row justify-content-center">
+            <div id="instagram"></div>
+          </div>
+          </div>
+        </div>
 
+      </div><!-- /.container -->
       <!-- FOOTER -->
       <footer class="container">
+        <br/>
         <p>This page is dynamically generated from RSS feeds - blank spaces mean something on the Internet is broken!</p>
-        <p>&copy; 2017 Martin Hamilton, <a href="LICENSE">MIT License</a> in case you want to copy any of my HTML, Javascript etc</p>
+        <p>&copy; 2017 Martin Hamilton, <a href="https://github.com/martin-hamilton/martin-hamilton.github.io">available from GitHub</a> under the <a href="LICENSE">MIT License</a> in case you want to copy any of my HTML, Javascript etc</p>
         <p class="float-right"><a target="_self" href="#">Back to top</a></p>
       </footer>
 

@@ -2,6 +2,11 @@
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 
+.banana {
+  border-radius: 20px;
+  background: #000; // without a background or border applied you won't be able to see if its rounded
+}
+
 body {
   padding-top: 3rem;
   padding-bottom: 3rem;
