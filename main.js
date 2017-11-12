@@ -6,9 +6,9 @@ var feed = new Instafeed({
 		clientId: 'cbffec43b7ab4d928debe26f7f20a75f',
 		accessToken: '33969486.cbffec4.24b30e38bca3414188358a2705892858',
 		target: 'instagram',
-		limit: 5,
+		limit: 6,
 		resolution: 'standard_resolution',
-		template: '<a href="{{link}}"><img src="{{image}}" width="200" height="200" /></a>&nbsp;',
+		template: '<a href="{{link}}"><img src="{{image}}" width="150" height="150" /></a>&nbsp;',
 		after: function() {
 			var el = document.getElementById('instagram');
 			if (el.classList)
