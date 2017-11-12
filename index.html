@@ -1,28 +1,260 @@
----
-layout: default
----
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Martin Hamilton">
+    <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 
-<div id="content-wrapper">
-      <div class="inner clearfix">
-        
-<aside id="sidebar">
-<a class="twitter-timeline" data-height="600" data-width="220" href="https://twitter.com/martin_hamilton?ref_src=twsrc%5Etfw">Tweets by martin_hamilton</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-</aside>
-  </div>
-</div>
+    <title>Martin Hamilton</title>
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
 
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" data-hash="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+<script src="holder.min.js"></script>
+<script src="https://use.fontawesome.com/8a2ef6ff21.js"></script>
+<link href="bootstrap-social.css" rel="stylesheet">
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
-</div>
+<script>
+$.getJSON("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fforesight.jiscinvolve.org%2Ffeed%2F", function( data ) {
+  var items = [];
+  var count = 0;
+  $.each( data.items, function( key, val ) {
+    if (count <5) {
+      items.push( "<li><a href='" + val.link + "'>" + val.title + "</a></li>" );
+    }
+    count++;
+  });
 
+  $( "<ul/>", {
+    "class": "my-new-list",
+    html: items.join( "" )
+  }).appendTo( ".foresight" );
+});
+</script>
+
+<script>
+$.getJSON("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Finnovativetechnology.jiscinvolve.org%2Ffeed%2F", function( data ) {
+  var items = [];
+  var count = 0;
+  $.each( data.items, function( key, val ) {
+    if (count <5) {
+      items.push( "<li><a href='" + val.link + "'>" + val.title + "</a></li>" );
+    }
+    count++;
+  });
+
+  $( "<ul/>", {
+    "class": "my-new-list",
+    html: items.join( "" )
+  }).appendTo( ".innovativetech" );
+});
+</script>
+
+<script>
+$.getJSON("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.slideshare.net%2Frss%2Fuser%2Fcomth", function( data ) {
+  var items = [];
+  var count = 0;
+  $.each( data.items, function( key, val ) {
+    if (count <5) {
+     items.push( "<li><a href='" + val.link + "'>" + val.title + "</a></li>" );
+    }
+    count++;
+  });
+
+  $( "<ul/>", {
+    "class": "my-new-list",
+    html: items.join( "" )
+  }).appendTo( ".slideshare" );
+});
+</script>
+
+<script>
+$.getJSON("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.youtube.com%2Ffeeds%2Fvideos.xml%3Fchannel_id%3DUC7O3Fdc2iei2YHBmSD98mMQ", function( data ) {
+  var items = [];
+  var count = 0;
+  $.each( data.items, function( key, val ) {
+    if (count < 5) {
+      var shorttitle = val.title.replace("Martin Hamilton - ", "");
+      items.push( "<li><a href='" + val.link + "'>" + shorttitle + "</a></li>" );
+    }
+    count++;
+  });
+
+  $( "<ul/>", {
+    "class": "my-new-list",
+    html: items.join( "" )
+  }).appendTo( ".youtube" );
+});
+</script>
+
+  </head>
+  <body>
+
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">Martin Hamilton</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#youtube">YouTube</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#slideshare">Slide Decks</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#innovativetech">Edtech Futures</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#foresight">Horizon Scanning</a>
+            </li>
+          </ul>
+          <form class="form-inline mt-2 mt-md-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+    </header>
+
+    <main role="main">
+
+      <div id="about"></div>
+      <div class="featurette-divider"></div>
+
+      <div class="container marketing">
+
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2>About Me</h2>
+            <p class="lead">Hi, I'm Martin. I work for <a href="https://www.jisc.ac.uk/staff/martin-hamilton">Jisc</a> in the UK as a Futurist - here's my <a href="https://www.jisc.ac.uk/staff/martin-hamilton">work home page</a>. We run shared services for UK universities and colleges, like the <a href="https://www.jisc.ac.uk/janet">Janet network</a>, <a href="https://www.jiscmail.ac.uk">JiscMail</a> and <a href="http://eduroam.org">eduroam</a></p>
+            <p class="lead">Right now I'm mainly looking at the potential for research and education of AR, VR, AI, ML and other Two Letter Acronyms. Read on to find out more, and do <a href="mailto:martin.hamilton@jisc.ac.uk">get in touch</a> if you're interested in collaborating ;-)</p>
+	    <p class="lead">
+              <a class="btn btn-social-icon btn-twitter" href="https://twitter.com/martin_hamilton"> <span class="fa fa-twitter"></span> </a> 
+              <a class="btn btn-social-icon btn-instagram" href="https://instagram.com/martin_hamilton"> <span class="fa fa-instagram"></span> </a> 
+              <a class="btn btn-social-icon btn-linkedin" href="https://www.linkedin.com/in/martinhamilton/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3B1kk%2BRyCwSK61YWtDdYpe6w%3D%3D&licu=urn%3Ali%3Acontrol%3Ad_flagship3_feed-identity_profile_photo"> <span class="fa fa-linkedin"></span> </a> 
+              <a class="btn btn-social-icon btn-youtube" href="https://www.youtube.com/martin_hamilton"> <span class="fa fa-youtube"></span> </a> 
+              <a class="btn btn-social-icon btn-github" href="https://github.com/martin-hamilton"> <span class="fa fa-github"></span> </a> 
+              <a class="btn btn-social-icon btn-google" href="mailto:martin.hamilton@jisc.ac.uk"> <span class="fa fa-google"></span> </a> 
+              <a class="btn" href="https://dev.to/martin_hamilton"> <img src="devto.png"><span class="fa"></span></a>
+              </p>
+          </div>
+          <div class="col-md-5 order-md-1">
+            <img class="featurette-image img-fluid mx-auto" src="ms-icon-310x310.png">
+          </div>
+        </div>
+
+	<div id="youtube"></div>
+        <div class="featurette-divider"></div>
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2>YouTube Channel</h2>
+            <p class="lead">You'll find recordings of my talks and tech demos, unboxing and walk throughs on my YouTube channel</p>
+          <div class="youtube">
+            <div id="rss-yt"></div>
+          </div>
+          </div>
+          <div class="col-md-5">
+            <img class="featurette-image img-fluid mx-auto" src="youtube.png">
+          </div>
+        </div>
+
+	<div id="slideshare"></div>
+        <div class="featurette-divider"></div>
+
+        <div id="slideshare" class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2>Slide Decks</h2>
+            <p class="lead">I do a lot of public speaking about technology and tech trends impact on society - most of my slides are available to view on <a href="https://slideshare.net/comth">SlideShare</a></p>
+          <div class="slideshare">
+            <div id="rss-slideshare"></div>
+          </div>
+          </div>
+          <div class="col-md-5 order-md-1">
+            <img class="featurette-image img-fluid mx-auto" src="slideshare.png" alt="Generic placeholder image">
+          </div>
+        </div>
+
+	<div id="innovativetech"></div>
+        <div class="featurette-divider"></div>
+
+        <div id="innovativetech" class="row featurette">
+          <div class="col-md-7">
+            <h2>Edtech Futures</h2>
+            <p class="lead">Hear about the latest tech in research and education from me and my team mates <a href="https://www.jisc.ac.uk/staff/suhad-aljundi">Suhad</a> and <a href="https://www.jisc.ac.uk/staff/matt-ramirez">Matt</a> on our <a href="https://innovativetechnology.jiscinvolve.org">Innovative Technology</a> blog</p>
+          <div class="innovativetech">
+            <div id="rss-innovativetech"></div>
+          </div>
+          </div>
+          <div class="col-md-5">
+            <img class="featurette-image img-fluid mx-auto" src="innovativetech.png" alt="Generic placeholder image">
+          </div>
+        </div>
+
+	<div id="foresight"></div>
+        <div class="featurette-divider"></div>
+
+        <div id="foresight" class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2>Horizon Scanning</h2>
+            <p class="lead">Read our latest horizon scanning reports on the <a href="https://foresight.jiscinvolve.org">Technology Foresight</a> blog</p>
+          <div class="foresight">
+            <div id="rss-foresight"></div>
+          </div>
+          </div>
+          <div class="col-md-5">
+            <img class="featurette-image img-fluid mx-auto" src="foresight.png" alt="Generic placeholder image">
+          </div>
+        </div>
+
+        <div class="featurette-divider"></div>
+        <!-- /END THE FEATURETTES -->
+
+      </div><!-- /.container -->
+
+      <!-- FOOTER -->
+      <footer class="container">
+        <p class="float-right"><a href="#">Back to top</a></p>
+        <p>This page is dynamically generated from RSS feeds - blank spaces mean something on the Internet is broken!</p>
+        <p>&copy; 2017 Martin Hamilton, <a href="LICENSE">MIT License</a> in case you want to copy any of my HTML, Javascript etc</p>
+      </footer>
+
+    </main>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  </body>
+</html>
