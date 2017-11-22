@@ -59,7 +59,8 @@ $.getJSON("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fforesight.
   var count = 0;
   $.each( data.items, function( key, val ) {
     if (count <5) {
-      items.push( "<li><a href='" + val.link + "'>" + val.title + "</a></li>" );
+      var shorttitle = val.title.replace("Martin Hamilton - ", "");
+      items.push( "<li><a href='" + val.link + "'>" + shorttitle + "</a></li>" );
     }
     count++;
   });
@@ -77,7 +78,8 @@ $.getJSON("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Finnovative
   var count = 0;
   $.each( data.items, function( key, val ) {
     if (count <5) {
-      items.push( "<li><a href='" + val.link + "'>" + val.title + "</a></li>" );
+      var shorttitle = val.title.replace("Martin Hamilton - ", "");
+      items.push( "<li><a href='" + val.link + "'>" + shorttitle + "</a></li>" );
     }
     count++;
   });
