@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: martinh.net
-Token: ab296dc50d888632a5e0e3252278543b369a35f5c4ff518d16c1ca872a0c5671
