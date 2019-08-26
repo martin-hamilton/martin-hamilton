@@ -229,8 +229,8 @@ img {
       position: absolute;
       display: block;
       content: "";
-      -webkit-animation: vcard-load 2s ease-in-out infinite;
-      animation: vcard-load 2s ease-in-out infinite;
+      -webkit-animation: vcard-load 0.5s ease-in-out infinite;
+      animation: vcard-load 0.5s ease-in-out infinite;
       height: 8px;
       border-radius: 5px; }
     #preloader .loader:before {
