@@ -165,7 +165,9 @@
 
     // :: 15.0 Tooltip Active Code
     if ($.fn.tooltip) {
-        $('[data-toggle="tooltip"]').tooltip();
+        $('[data-toggle="tooltip"]').tooltip({
+	    trigger: hover
+	});
     }
 
     // :: 16.0 prevent default a click
