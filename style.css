@@ -648,6 +648,9 @@ textarea:focus {
       z-index: -10;
       content: ''; }
 
+.single-portfolio-area:hover {
+  background-color: #ffb016; }
+
 .single-portfolio-area {
   position: relative;
   z-index: 1; }
@@ -689,9 +692,10 @@ textarea:focus {
         .single-portfolio-area .portfolio-content .vcard-img-zoom a:hover {
           color: #252525; }
   .single-portfolio-area:hover .portfolio-content h5 {
-    color: #ffb016; }
+    color: #ffffff; }
   .single-portfolio-area:hover .portfolio-content .vcard-img-zoom {
     right: 0; }
+
 
 /* :: 10.0 Cool Facts Area */
 .cool-facts-area {
