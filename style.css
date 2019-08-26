@@ -652,6 +652,7 @@ textarea:focus {
   background-color: #ffb016; }
 
 .single-portfolio-area {
+  padding-top: 2%;
   position: relative;
   z-index: 1; }
   .single-portfolio-area img {
