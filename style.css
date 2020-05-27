@@ -342,7 +342,7 @@ textarea:focus {
   border: none;
   border-radius: 0;
   padding: 0 30px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 54px;
   font-weight: 600;
   -webkit-transition-duration: 500ms;
@@ -350,7 +350,7 @@ textarea:focus {
   text-transform: capitalize;
   background-color: #ffb016; }
   .vcard-btn.active, .vcard-btn:hover, .vcard-btn:focus {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
     color: #ffffff;
     background-color: #252525; }
@@ -374,6 +374,8 @@ textarea:focus {
     position: relative;
     width: 100%;
     z-index: 100;
+    font-weight: 600;
+    font-size: 16px;
     height: 160px;
     -webkit-transition-duration: 700ms;
     transition-duration: 700ms; }
@@ -395,7 +397,7 @@ textarea:focus {
         background-color: #ffffff;
         line-height: 1;
         color: #252525;
-        font-weight: 500;
+        font-weight: 600;
         font-size: 16px; }
         .header-area .vcard-main-menu .classy-navbar .classynav > ul > li > a:hover, .header-area .vcard-main-menu .classy-navbar .classynav > ul > li > a:focus {
           color: #ffb016; }
@@ -433,6 +435,8 @@ textarea:focus {
     position: fixed;
     width: 100%;
     top: 0;
+        font-weight: 600;
+        font-size: 16px;
     left: 0;
     right: 0;
     z-index: 100;
@@ -589,13 +593,14 @@ textarea:focus {
 /* :: 8.0 Service Area */
 .services-area {
   position: relative;
-  z-index: 1;
-  background-color: #ffb016; }
+  z-index: 1; }
 
 .single-service-area {
   position: relative;
   z-index: 1; }
   .single-service-area .service-title {
+    padding: 5px;
+    background-color: #ffb016;
     margin-bottom: 30px; }
     .single-service-area .service-title .icon {
       margin-right: 30px; }
@@ -1269,192 +1274,5 @@ textarea:focus {
         padding-right: 0;
         margin-left: 0;
         margin-right: 0; } }
-
-/* :: 17.0 Work Experience Area */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .work-experience-area {
-    margin-top: 50px; } }
-@media only screen and (max-width: 767px) {
-  .work-experience-area {
-    margin-top: 50px; } }
-
-.work-experience-timeline-wrapper {
-  position: relative;
-  z-index: 1; }
-  .work-experience-timeline-wrapper .timeline-row {
-    width: 2px;
-    height: 90%;
-    top: 2px;
-    position: absolute;
-    background-color: #c7d4dc;
-    left: calc(50% - 1px); }
-  .work-experience-timeline-wrapper .single-experience-timeline {
-    position: relative;
-    z-index: 2;
-    width: calc(50% - 100px);
-    height: auto; }
-    @media only screen and (max-width: 767px) {
-      .work-experience-timeline-wrapper .single-experience-timeline {
-        width: calc(50% - 30px); } }
-    .work-experience-timeline-wrapper .single-experience-timeline::after {
-      position: absolute;
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-      border: 2px solid #ffb016;
-      content: '';
-      top: 0;
-      right: -107px;
-      background-color: #fff; }
-      @media only screen and (max-width: 767px) {
-        .work-experience-timeline-wrapper .single-experience-timeline::after {
-          right: -37px; } }
-    .work-experience-timeline-wrapper .single-experience-timeline.odd-item {
-      margin-right: 100px; }
-      @media only screen and (max-width: 767px) {
-        .work-experience-timeline-wrapper .single-experience-timeline.odd-item {
-          margin-right: 30px; } }
-    .work-experience-timeline-wrapper .single-experience-timeline.even-item {
-      margin-left: 100px;
-      left: 50%;
-      margin-top: -70px; }
-      @media only screen and (max-width: 767px) {
-        .work-experience-timeline-wrapper .single-experience-timeline.even-item {
-          margin-left: 30px; } }
-      .work-experience-timeline-wrapper .single-experience-timeline.even-item::after {
-        right: auto;
-        left: -107px; }
-        @media only screen and (max-width: 767px) {
-          .work-experience-timeline-wrapper .single-experience-timeline.even-item::after {
-            right: auto;
-            left: -37px; } }
-    .work-experience-timeline-wrapper .single-experience-timeline.active::after {
-      background-color: #ffb016; }
-    .work-experience-timeline-wrapper .single-experience-timeline h5 {
-      font-size: 18px;
-      color: #ffb016;
-      margin-bottom: 4px; }
-      @media only screen and (max-width: 767px) {
-        .work-experience-timeline-wrapper .single-experience-timeline h5 {
-          font-size: 14px; } }
-    .work-experience-timeline-wrapper .single-experience-timeline h4 {
-      font-size: 24px;
-      margin-bottom: 4px; }
-      @media only screen and (max-width: 767px) {
-        .work-experience-timeline-wrapper .single-experience-timeline h4 {
-          font-size: 16px; } }
-    .work-experience-timeline-wrapper .single-experience-timeline h6 {
-      font-size: 16px;
-      color: #828282;
-      margin-bottom: 20px;
-      text-transform: uppercase; }
-      @media only screen and (max-width: 767px) {
-        .work-experience-timeline-wrapper .single-experience-timeline h6 {
-          font-size: 14px; } }
-    @media only screen and (max-width: 767px) {
-      .work-experience-timeline-wrapper .single-experience-timeline p {
-        font-size: 13px; } }
-
-/* :: 18.0 Education Area */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .education-area {
-    margin-top: 50px; } }
-@media only screen and (max-width: 767px) {
-  .education-area {
-    margin-top: 50px; } }
-
-.education-timeline-wrapper {
-  position: relative;
-  z-index: 1; }
-  .education-timeline-wrapper .timeline-row {
-    width: 2px;
-    height: 90%;
-    top: 2px;
-    position: absolute;
-    background-color: #c7d4dc;
-    left: calc(50% - 1px); }
-  .education-timeline-wrapper .single-education-timeline {
-    position: relative;
-    z-index: 2;
-    width: calc(50% - 100px);
-    height: auto; }
-    .education-timeline-wrapper .single-education-timeline .education-icon {
-      -webkit-box-flex: 0;
-      -ms-flex: 0 0 30%;
-      flex: 0 0 30%;
-      min-width: 30%;
-      width: 30%; }
-      @media only screen and (max-width: 767px) {
-        .education-timeline-wrapper .single-education-timeline .education-icon {
-          -webkit-box-flex: 0;
-          -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
-          min-width: 100%;
-          width: 100%;
-          margin-right: 0 !important;
-          margin-bottom: 30px; } }
-    @media only screen and (max-width: 767px) {
-      .education-timeline-wrapper .single-education-timeline {
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        width: calc(50% - 30px); } }
-    .education-timeline-wrapper .single-education-timeline::after {
-      position: absolute;
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-      border: 2px solid #ffb016;
-      content: '';
-      top: 0;
-      right: -107px;
-      background-color: #fff; }
-      @media only screen and (max-width: 767px) {
-        .education-timeline-wrapper .single-education-timeline::after {
-          right: -37px; } }
-    .education-timeline-wrapper .single-education-timeline.odd-item {
-      margin-right: 100px; }
-      @media only screen and (max-width: 767px) {
-        .education-timeline-wrapper .single-education-timeline.odd-item {
-          margin-right: 30px; } }
-    .education-timeline-wrapper .single-education-timeline.even-item {
-      margin-left: 100px;
-      left: 50%;
-      margin-top: -70px; }
-      @media only screen and (max-width: 767px) {
-        .education-timeline-wrapper .single-education-timeline.even-item {
-          margin-left: 30px; } }
-      .education-timeline-wrapper .single-education-timeline.even-item::after {
-        right: auto;
-        left: -107px; }
-        @media only screen and (max-width: 767px) {
-          .education-timeline-wrapper .single-education-timeline.even-item::after {
-            right: auto;
-            left: -37px; } }
-    .education-timeline-wrapper .single-education-timeline.active::after {
-      background-color: #ffb016; }
-    .education-timeline-wrapper .single-education-timeline h5 {
-      font-size: 18px;
-      color: #ffb016;
-      margin-bottom: 4px; }
-      @media only screen and (max-width: 767px) {
-        .education-timeline-wrapper .single-education-timeline h5 {
-          font-size: 14px; } }
-    .education-timeline-wrapper .single-education-timeline h4 {
-      font-size: 24px;
-      margin-bottom: 4px; }
-      @media only screen and (max-width: 767px) {
-        .education-timeline-wrapper .single-education-timeline h4 {
-          font-size: 16px; } }
-    .education-timeline-wrapper .single-education-timeline h6 {
-      font-size: 16px;
-      color: #828282;
-      margin-bottom: 20px;
-      text-transform: uppercase; }
-      @media only screen and (max-width: 767px) {
-        .education-timeline-wrapper .single-education-timeline h6 {
-          font-size: 14px; } }
-    @media only screen and (max-width: 767px) {
-      .education-timeline-wrapper .single-education-timeline p {
-        font-size: 13px; } }
 
 /*# sourceMappingURL=style.css.map */
