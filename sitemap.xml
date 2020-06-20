@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
       xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
@@ -39,10 +40,7 @@
   <lastmod>2020-06-13T18:10:08+00:00</lastmod>
   <priority>0.64</priority>
 </url>
-</urlset>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-   <url>
+<url>
      <loc>https://martinh.net/skills.html</loc>
      <video:video>
        <video:thumbnail_loc>https://martinh.net/img/core-img/e4thumb.jpg</video:thumbnail_loc>
@@ -54,5 +52,5 @@
        <video:publication_date>2019-04-16T08:20:30+00:00</video:publication_date>
        <video:family_friendly>yes</video:family_friendly>
      </video:video>
-   </url>
+</url>
 </urlset>
