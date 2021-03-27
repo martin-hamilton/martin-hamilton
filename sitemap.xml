@@ -6,37 +6,37 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
   <loc>https://martinh.net/</loc>
-  <lastmod>2020-06-13T18:10:08+00:00</lastmod>
+  <lastmod>2021-03-27T18:10:08+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://martinh.net/skills.html</loc>
-  <lastmod>2020-06-13T18:10:08+00:00</lastmod>
+  <loc>https://martinh.net/skills</loc>
+  <lastmod>2021-03-27T18:10:08+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://martinh.net/services.html</loc>
-  <lastmod>2020-06-13T18:10:08+00:00</lastmod>
+  <loc>https://martinh.net/services</loc>
+  <lastmod>2021-03-27T18:10:08+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://martinh.net/portfolio.html</loc>
-  <lastmod>2020-06-13T18:10:08+00:00</lastmod>
+  <loc>https://martinh.net/portfolio</loc>
+  <lastmod>2021-03-27T18:10:08+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://martinh.net/contact.html</loc>
-  <lastmod>2020-06-13T18:10:08+00:00</lastmod>
+  <loc>https://martinh.net/contact</loc>
+  <lastmod>2021-03-27T18:10:08+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://martinh.net/testimonials.html</loc>
-  <lastmod>2020-06-13T18:10:08+00:00</lastmod>
+  <loc>https://martinh.net/testimonials</loc>
+  <lastmod>2021-03-27T18:10:08+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://martinh.net/index.html</loc>
-  <lastmod>2020-06-13T18:10:08+00:00</lastmod>
+  <loc>https://martinh.net/</loc>
+  <lastmod>2021-03-27T18:10:08+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 </urlset>
